@@ -1,0 +1,48 @@
+<%- include('../includes/head') %>
+<%- include('../includes/navigation') %>
+    
+<div style="padding:0 16px;">
+    <center><h1>Add Products</h1></center>
+    <br>
+
+    <div class="container">
+        <form action="/admin/addProduct" method="POST">
+          <div class="row">
+            <div class="col-25">
+              <label for="pName">Produt Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="pName" name="productName" placeholder="Enter Product  name..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="pPrice">Product Price</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="pPrice" name="productPrice" placeholder="Enter Product Price..">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="pImage">Product Image</label>
+            </div>
+            <input type="file" id="pImage" name="productImage" accept="image/*">
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="pDescription">Product Description</label>
+            </div>
+            <div class="col-75">
+              <textarea id="pDescription" name="productDescription" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+
+</div>
+
+<%- include('../includes/end') %>

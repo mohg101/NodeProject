@@ -1,0 +1,24 @@
+<%- include('../includes/head') %>
+<%- include('../includes/navigation') %>
+    
+<div style="padding:0 16px;">
+    <center><h1>Shop home</h1></center>
+    <h4>Products</h4>
+</div>
+<div>
+    <%if (Products.length > 0) {%>
+        <% for (let product of Products){ %>
+            <div class="card">
+                <h1><%= product.title %></h1>
+                <p class="price"><%= product.price %></p>
+                <p><%= product.desc%></p>
+                <p><button>Add to Cart</button></p>
+            </div>
+        <%}%>
+    <% } else {%>
+        <h3>No Products Available!!!</h3>
+    <% } %>
+
+</div>
+
+<%- include('../includes/end') %>
